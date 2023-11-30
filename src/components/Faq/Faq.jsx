@@ -1,5 +1,5 @@
 import React,{ useState }  from 'react';
-import icons from "../../utils/img/icons.svg";
+//import icons from "../../utils/img/icons.svg";
 import { Wrapper,Title, GreenLine,CardList,CardWrapper, CardQuestionTitle,CardWrapperUpper,CardQuestionAnswer,ButtonIcon,Show,UnShow } from './Faq.styled';
 
 export const Faq = () => {
