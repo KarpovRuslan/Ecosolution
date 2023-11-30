@@ -11,10 +11,9 @@ function App() {
       <Header />
       <Main />
       <About />
-       <Electricity />
-       <Faq/>
-      {/*<Cases />
+      <Electricity />
       <Faq />
+      {/*<Cases />
       <Contact /> */}
       <Footer />
     </div>

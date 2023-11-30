@@ -9,7 +9,6 @@ export const BlurBackground = styled.div`
   background: rgba(23, 61, 51, 0.25);
   backdrop-filter: blur(2px);
   z-index: ${(props) => (props.isOpen ? 10 : -10)};
-  //display: ${(props) => (props.isOpen ? "block" : "none")};
   opacity: ${(props) => (props.isOpen ? 1 : 0)};
   transition: all 0.5s ease;
 `;
@@ -27,7 +26,7 @@ export const MenuWrapper = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   padding: 24px;
-  
+
   position: fixed;
   top: 36px;
   right: 50%;
@@ -48,8 +47,8 @@ export const MenuWrapper = styled.div`
 
 export const BtnClose = styled.button`
   display: inline-flex;
-  align-items:flex-end;
-  border:0px;
+  align-items: flex-end;
+  border: 0px;
   background: transparent;
   color: var(--white-color);
   margin-bottom: 8px;
@@ -70,7 +69,7 @@ export const BtnClose = styled.button`
   }
 `;
 
-export const BtnCloseImg = styled.svg`
+export const BtnCloseIcon = styled.svg`
   stroke: var(--white-color);
   width: 20px;
   height: 20px;
@@ -99,14 +98,13 @@ export const NavLink = styled.a`
   align-items: center;
   gap: 8px;
   background: transparent;
-  //color: rgba(255, 255, 255, 0.25);
   color: var(--white-color);
   font-family: Fira Sans;
   font-size: 24px;
   line-height: normal;
   letter-spacing: -0.96px;
   transition: 0.3s ease;
-  cursor:pointer;
+  cursor: pointer;
   &:hover,
   &:focus {
     color: var(--main-green-color);
@@ -116,13 +114,11 @@ export const NavLink = styled.a`
   }
 `;
 
-export const NavLinkSVG = styled.svg`
-//stroke: rgba(255, 255, 255, 0.25);
-  stroke: var(--white-color); 
+export const NavLinkIcon = styled.svg`
+  stroke: var(--white-color);
   fill: transparent;
   transform: rotate(-45deg);
   width: 16px;
   height: 16px;
   transition: 0.3s ease;
 `;
-
