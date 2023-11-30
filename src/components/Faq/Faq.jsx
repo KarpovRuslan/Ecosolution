@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import faqData from "../helpers/faqData.json";
 import {
   Wrapper,
@@ -22,6 +22,12 @@ import {
 
 export const Faq = () => {
   const [show, setShow] = useState([false, true, true, true, true]);
+  const [scrolled, setScrolled] = useState(0);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    setScrolled(scrollPosition > 0);
+  };
 
   const handleToggle = (index) => {
     setShow((prevStates) => {
@@ -29,8 +35,22 @@ export const Faq = () => {
     });
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleClick = () => {
+    const clickAndGoTo = document.getElementById("contact");
+    if (clickAndGoTo) {
+      clickAndGoTo.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <Wrapper>
+    <Wrapper id="faq" scrolled={scrolled}>
       <Title>Frequently Asked Questions</Title>
       <CardListWrapper>
         {faqData.map((faq, index) => (
@@ -52,7 +72,7 @@ export const Faq = () => {
       </CardListWrapper>
       <LowerText>
         Didn't find the answer to your question?
-        <Btn>
+        <Btn onClick={handleClick}>
           <InnerText>Contact Us</InnerText>
           <InnerCircle>
             <ArrowIcon />

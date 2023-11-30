@@ -8,7 +8,7 @@ export const List = styled.ul`
 export const LinkIcon = styled.svg`
   fill: transparent;
   //stroke: var(--white-color);
-  stroke: ${({ strokeColor }) => strokeColor || "var(--white-color)"};
+  stroke: ${({ color }) => color || "var(--white-color)"};
   width: 24px;
   height: 24px;
   transition: 0.3s ease;

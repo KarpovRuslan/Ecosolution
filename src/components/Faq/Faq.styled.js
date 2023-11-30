@@ -150,7 +150,7 @@ export const ButtonIcon = styled.button`
   }
 `;
 
-export const Show = styled.image`
+export const Show = styled.img`
   width: 16px;
   height: 16px;
   content: url(${show});
@@ -160,7 +160,7 @@ export const Show = styled.image`
   }
 `;
 
-export const UnShow = styled.image`
+export const UnShow = styled.img`
   width: 16px;
   height: 16px;
   content: url(${unShow});
@@ -191,7 +191,7 @@ export const LowerText = styled.p`
   }
 `;
 
-export const InnerCircle = styled.button`
+export const InnerCircle = styled.p`
   display: flex;
   width: 14px;
   height: 14px;

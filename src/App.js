@@ -4,6 +4,8 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Electricity from "./components/Electricity/Electricity";
 import { Faq } from "./components/Faq/Faq";
+import Cases from "./components/Cases/Cases";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -12,9 +14,9 @@ function App() {
       <Main />
       <About />
       <Electricity />
+      <Cases />
       <Faq />
-      {/*<Cases />
-      <Contact /> */}
+      <Contact />
       <Footer />
     </div>
   );

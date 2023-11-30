@@ -24,7 +24,7 @@ width: 16px;
   rotate:-90deg;
 `;
 
-export const InnerCircle =styled.button`
+export const InnerCircle =styled.p`
 display: flex;
   width: 32px;
   height: 32px;
