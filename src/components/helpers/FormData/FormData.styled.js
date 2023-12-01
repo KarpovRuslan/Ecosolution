@@ -1,21 +1,23 @@
 import { styled } from "styled-components";
-import { Field, Form, ErrorMessage } from "formik";
 
-export const FormStyle = styled(Form)`
+export const FormStyle = styled.form`
   display: flex;
   flex-direction: column;
   margin-top: 36px;
   margin-bottom: 36px;
   padding: 36px 12px;
   background-color: var(--second-backg-color);
-  &:first-child {
-    margin-top: 0;
-  }
+
   @media screen and (min-width: 768px) {
     margin-bottom: 100px;
+    padding: 36px 24px;
+    &:first-child {
+      margin-top: 0;
+    }
   }
   @media screen and (min-width: 1280px) {
     margin-bottom: 120px;
+    padding: 48px;
   }
 `;
 
@@ -29,7 +31,7 @@ export const Label = styled.label`
   }
 `;
 
-export const Input = styled(Field)`
+export const Input = styled.input`
   font-family: Fira Sans;
   font-size: 18px;
   letter-spacing: -0.72px;
@@ -37,16 +39,17 @@ export const Input = styled(Field)`
   background-color: transparent;
   &:focus,
   &:hover {
-    outline: 2px solid var(--main-dark-green-color);
+    outline: 0px solid var(--main-dark-green-color);
   }
 
   &::placeholder {
     color: #bdbdbd;
   }
-  border-bottom-color: var(--main-green-color);
+  border-bottom-color: ${({ hasError }) =>
+    hasError ? "var(--warning-color)" : "var(--main-green-color)"};
 `;
 
-export const ErrorMessageStyle = styled(ErrorMessage)`
+export const ErrorMessageStyle = styled.p`
   margin-left: auto;
   color: var(--warning-color);
   margin-top: 8px;

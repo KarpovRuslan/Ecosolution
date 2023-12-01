@@ -1,5 +1,4 @@
-import { Formik } from "formik";
-import * as Yup from "yup";
+import { useForm } from "react-hook-form";
 import {
   FormStyle,
   Label,
@@ -13,95 +12,116 @@ import {
 } from "./FormData.styled";
 import icons from "../../../utils/img/icons.svg";
 
-const schema = Yup.object().shape({
-  fullName: Yup.string()
-    .min(2, "Too Short!")
-    .max(50, "Too Long!")
-    .required("Wrong Fullname"),
-  email: Yup.string().email("Invalid email").required("Wrong Email"),
-  phone: Yup.string().required("Wrong Phone"),
-  message: Yup.string(),
-});
-
 const FormData = () => {
+  const {
+    register,
+    trigger,
+    formState: { errors },
+  } = useForm();
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const onSubmit = async (e) => {
+    const isValid = await trigger();
+    if (!isValid) {
+      e.preventDefault();
+    }
+  };
+
   return (
-    <Formik
-      initialValues={{
-        fullName: "",
-        email: "",
-        phone: "",
-        message: "",
-      }}
-      validationSchema={schema}
-      onSubmit={async (values) => {
-        await new Promise((res) => setTimeout(res, 400));
-        alert(JSON.stringify(values, null, 2));
-      }}
+    <FormStyle
+      target="_blank"
+      onSubmit={onSubmit}
+      action="https://formsubmit.co/08ef7751867b3cfaf9a68f33deb03aef"
+      method="POST"
     >
-      {(formProps) => (
-        <FormStyle>
-          <Label htmlFor="fullName">* Full name:</Label>
-          <Input
-            id="fullName"
-            name="fullName"
-            placeholder="John Rosie"
-            required
-            $hasError={
-              Object.keys(formProps.errors)[0] && formProps.touched.fullName
-            }
-          />
-          <ErrorMessageStyle name="fullName" component="div" />
-
-          <Label htmlFor="email">* E-mail:</Label>
-          <Input
-            id="email"
-            name="email"
-            placeholder="johnrosie@gmail.com"
-            type="email"
-            required
-            $hasError={
-              Object.keys(formProps.errors)[1] && formProps.touched.email
-            }
-          />
-          <ErrorMessageStyle name="email" component="div" />
-
-          <Label htmlFor="phone">* Phone:</Label>
-          <Input
-            id="phone"
-            name="phone"
-            placeholder="380961234567"
-            type="phone"
-            required
-            $hasError={
-              Object.keys(formProps.errors)[2] && formProps.touched.phone
-            }
-          />
-          <ErrorMessageStyle name="phone" component="div" />
-
-          <Label htmlFor="message">Message:</Label>
-          <Input
-            as="textarea"
-            name="message"
-            id="message"
-            cols="20"
-            rows="5"
-            placeholder="Your message"
-          />
-          <ErrorMessageStyle name="message" component="div" />
-
-          <ButtonWrapper>
-            <Btn type="submit" text="Send">
-              <InnerText>Send</InnerText>
-              <InnerCircle>
-                <ArrowIcon>
-                  <use href={icons + "#icon-arrow-right"} />
-                </ArrowIcon>
-              </InnerCircle>
-            </Btn>
-          </ButtonWrapper>
-        </FormStyle>
+      <Label htmlFor="fullName">* Full name:</Label>
+      <Input
+        placeholder="John Rosie"
+        id="fullName"
+        name="fullName"
+        hasError={!!errors.name}
+        {...register("name", {
+          required: true,
+          maxLength: 50,
+          pattern: /^\w+\s\w+$/gm,
+        })}
+      />
+      {errors.name && (
+        <ErrorMessageStyle>
+          {errors.name.type === "required" && "This field is required"}
+          {errors.name.type === "maxLength" && "Max length is 50 characters"}
+          {errors.name.type === "pattern" && "Wrong Fullname"}
+        </ErrorMessageStyle>
       )}
-    </Formik>
+
+      <Label htmlFor="email">* E-mail:</Label>
+      <Input
+        id="email"
+        name="email"
+        required
+        placeholder="johnrosie@gmail.com"
+        hasError={!!errors.email}
+        {...register("email", {
+          required: true,
+          pattern: /^[A-Z0-9._%+-]+@[A-Z0-9._]+\.[A-Z]{2,}$/i,
+        })}
+      />
+      {errors.email && (
+        <ErrorMessageStyle name="email" component="div">
+          {errors.email.type === "required" && "This field is required"}
+          {errors.email.type === "pattern" && "Wrong Email"}
+        </ErrorMessageStyle>
+      )}
+
+      <Label htmlFor="phone">* Phone:</Label>
+      <Input
+        placeholder="380961234567"
+        id="phone"
+        name="phone"
+        type="phone"
+        required
+        hasError={!!errors.phone}
+        {...register("phone", {
+          required: true,
+          pattern: /^\+?(38)?(\d{10,11})$/,
+        })}
+      />
+      {errors.phone && (
+        <ErrorMessageStyle>
+          {errors.phone.type === "required" && "This field is required"}
+          {errors.phone.type === "pattern" && "Wrong Phone"}
+        </ErrorMessageStyle>
+      )}
+
+      <Label htmlFor="message">Message:</Label>
+      <Input
+        as="textarea"
+        rows={5}
+        cols={20}
+        placeholder="Your message"
+        {...register("message", {
+          maxLength: 2000,
+        })}
+      />
+      {errors.message && (
+        <ErrorMessageStyle>
+          {errors.message.type === "required" && "This field is required"}
+          {errors.message.type === "maxLength" &&
+            "Max length is 2000 characters"}
+        </ErrorMessageStyle>
+      )}
+
+      <ButtonWrapper>
+        <Btn type="submit" text="Send">
+          <InnerText>Send</InnerText>
+          <InnerCircle>
+            <ArrowIcon>
+              <use href={icons + "#icon-arrow-right"} />
+            </ArrowIcon>
+          </InnerCircle>
+        </Btn>
+      </ButtonWrapper>
+    </FormStyle>
   );
 };
 
