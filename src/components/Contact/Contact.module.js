@@ -38,6 +38,8 @@ export const TitleText = styled.p`
   }
   @media screen and (min-width: 1280px) {
     margin-top: 120px;
+    font-size: 36px;
+    line-height: 36px;
   }
 `;
 

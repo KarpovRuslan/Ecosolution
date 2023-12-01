@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import arrow from "../../utils/img/arrow-right.svg";
 
 export const Wrapper = styled.div`
   font-family: Fira Sans;
@@ -116,10 +115,12 @@ export const InnerText = styled.p`
   letter-spacing: -0.64px;
 `;
 
-export const ArrowIcon = styled.img`
+export const ArrowIcon = styled.svg`
   width: 16px;
   height: 16px;
-  content: url(${arrow});
+  stroke: var(--main-dark-green-color);
+  fill: none;
+  transition: 0.5s ease;
 `;
 
 export const InnerCircle = styled.p`

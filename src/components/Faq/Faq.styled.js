@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import show from "../../utils/img/add.svg";
-import unShow from "../../utils/img/minus.svg";
-import arrow from "../../utils/img/arrow-right.svg";
 
 export const Wrapper = styled.section`
   margin-top: 36px;
@@ -130,6 +127,18 @@ export const CardQuestionAnswer = styled.p`
   }
 `;
 
+export const Icon = styled.svg`
+  stroke: var(--main-dark-green-color);
+  fill: transparent;
+  width: 16px;
+  height: 16px;
+  transition: 0.5s ease;
+  @media screen and (min-width: 768px) {
+    width: 28px;
+    height: 28px;
+  }
+`;
+
 export const ButtonIcon = styled.button`
   display: flex;
   width: 16px;
@@ -144,26 +153,6 @@ export const ButtonIcon = styled.button`
   &:focus {
     transition: 0.5s ease;
   }
-  @media screen and (min-width: 768px) {
-    width: 28px;
-    height: 28px;
-  }
-`;
-
-export const Show = styled.img`
-  width: 16px;
-  height: 16px;
-  content: url(${show});
-  @media screen and (min-width: 768px) {
-    width: 28px;
-    height: 28px;
-  }
-`;
-
-export const UnShow = styled.img`
-  width: 16px;
-  height: 16px;
-  content: url(${unShow});
   @media screen and (min-width: 768px) {
     width: 28px;
     height: 28px;
@@ -235,9 +224,12 @@ export const InnerText = styled.p`
   letter-spacing: -0.64px;
 `;
 
-export const ArrowIcon = styled.img`
+export const ArrowIcon = styled.svg`
   width: 14px;
   height: 14px;
-  content: url(${arrow});
   transform: rotate(90deg);
+  stroke: var(--main-dark-green-color);
+  fill: transparent;
+  transform: rotate(90deg);
+  transition: 0.5s ease;
 `;

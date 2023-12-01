@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "../../utils/img/wind_turbine-min.jpeg";
+import icons from "../../utils/img/icons.svg";
 import {
   ArrowIcon,
   Btn,
@@ -54,7 +55,9 @@ const Main = () => {
           <Btn onClick={handleClick}>
             <InnerText>Learn more</InnerText>
             <InnerCircle>
-              <ArrowIcon />
+              <ArrowIcon>
+                <use href={icons + "#icon-arrow-right"} />
+              </ArrowIcon>
             </InnerCircle>
           </Btn>
         </MainWrapper>

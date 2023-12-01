@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import burgerMenu from "../../utils/img/burger.svg";
-import arrow from "../../utils/img/arrow-right.svg";
 
 export const Wrapper = styled.header`
   display: flex;
@@ -38,10 +36,12 @@ export const BurgerButton = styled.button`
   }
 `;
 
-export const BurgerIcon = styled.img`
+export const BurgerIcon = styled.svg`
   width: 16px;
   height: 16px;
-  content: url(${burgerMenu});
+  stroke: var(--main-black-color);
+  fill: transparent;
+  transition: 0.5s ease;
 `;
 
 export const InnerCircle = styled.div`
@@ -90,11 +90,13 @@ export const InnerText = styled.p`
   letter-spacing: -0.64px;
 `;
 
-export const ArrowIcon = styled.img`
-  width: 14px;
-  height: 14px;
-  content: url(${arrow});
+export const ArrowIcon = styled.svg`
+  width: 12px;
+  height: 12px;
   transform: rotate(90deg);
+  stroke: var(--main-dark-green-color);
+  fill: none;
+  transition: 0.5s ease;
 `;
 
 export const ButtonsWrapper = styled.div`

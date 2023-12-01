@@ -11,6 +11,7 @@ import {
 } from "./header.styled";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Logo from "../Logo/Logo";
+import icons from "../../utils/img/icons.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,12 +45,16 @@ const Header = () => {
       <Logo />
       <ButtonsWrapper>
         <BurgerButton onClick={handleMenuToggle}>
-          <BurgerIcon />
+          <BurgerIcon>
+            <use href={icons + "#icon-menu"} />
+          </BurgerIcon>
         </BurgerButton>
         <Btn onClick={handleGetInTouchClick}>
           <InnerText>Get in touch</InnerText>
           <InnerCircle>
-            <ArrowIcon />
+            <ArrowIcon>
+              <use href={icons + "#icon-arrow-right"} />
+            </ArrowIcon>
           </InnerCircle>
         </Btn>
         {isMenuOpen && (

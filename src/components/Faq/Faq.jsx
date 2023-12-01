@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import faqData from "../helpers/faqData.json";
+import icons from "../../utils/img/icons.svg";
 import {
   Wrapper,
   Title,
@@ -10,8 +11,7 @@ import {
   CardWrapperUpper,
   CardQuestionAnswer,
   ButtonIcon,
-  Show,
-  UnShow,
+  Icon,
   LowerText,
   Btn,
   InnerText,
@@ -59,7 +59,15 @@ export const Faq = () => {
             <CardWrapper>
               <CardWrapperUpper>
                 <ButtonIcon onClick={() => handleToggle(index)}>
-                  {show[index] ? <Show /> : <UnShow />}
+                  {show[index] ? (
+                    <Icon>
+                      <use href={icons + "#icon-add"} />
+                    </Icon>
+                  ) : (
+                    <Icon>
+                      <use href={icons + "#icon-minus"} />
+                    </Icon>
+                  )}
                 </ButtonIcon>
                 <CardQuestionTitle>{faq.question}</CardQuestionTitle>
               </CardWrapperUpper>
@@ -75,7 +83,9 @@ export const Faq = () => {
         <Btn onClick={handleClick}>
           <InnerText>Contact Us</InnerText>
           <InnerCircle>
-            <ArrowIcon />
+            <ArrowIcon>
+              <use href={icons + "#icon-arrow-right"} />
+            </ArrowIcon>
           </InnerCircle>
         </Btn>
       </LowerText>

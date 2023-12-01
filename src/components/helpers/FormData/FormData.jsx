@@ -11,6 +11,7 @@ import {
   ArrowIcon,
   ButtonWrapper,
 } from "./FormData.styled";
+import icons from "../../../utils/img/icons.svg";
 
 const schema = Yup.object().shape({
   fullName: Yup.string()
@@ -92,7 +93,9 @@ const FormData = () => {
             <Btn type="submit" text="Send">
               <InnerText>Send</InnerText>
               <InnerCircle>
-                <ArrowIcon />
+                <ArrowIcon>
+                  <use href={icons + "#icon-arrow-right"} />
+                </ArrowIcon>
               </InnerCircle>
             </Btn>
           </ButtonWrapper>

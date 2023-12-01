@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
+import icons from "../../utils/img/icons.svg";
 import {
   Wrapper,
   ArrowIcon,
@@ -8,6 +9,7 @@ import {
   LinksWrapper,
   AddressWrapper,
   Email,
+  MapLink,
 } from "./Footer.styled";
 import SocialLinks from "../SocialLinks/SocialLinks";
 
@@ -36,7 +38,9 @@ const Footer = () => {
       <Wrapper>
         <Logo />
         <InnerCircle onClick={handleClick}>
-          <ArrowIcon />
+          <ArrowIcon>
+            <use href={icons + "#icon-arrow-right"} />
+          </ArrowIcon>
         </InnerCircle>
       </Wrapper>
       <LinksWrapper>
@@ -44,7 +48,13 @@ const Footer = () => {
       </LinksWrapper>
 
       <AddressWrapper>
-        <p>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</p>
+        <MapLink
+          href="https://www.google.com.ua/maps/search/79005,+Ukraine,+Lvivstreet.+Shota+Rustaveli,+7/@49.8313557,24.0323843,17z/data=!3m1!4b1?entry=ttu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
+        </MapLink>
         <Email href="mailto:office@ecosolution.com">
           office@ecosolution.com
         </Email>
