@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   BurgerButton,
   BurgerIcon,
@@ -15,23 +15,26 @@ import icons from "../../utils/img/icons.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(0);
+  const [scrl, setScrl] = useState("false");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setScrl(scrollY > 0 ? "true" : "false");
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   const handleMenuClose = () => {
     setIsMenuOpen(false);
   };
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    setScrolled(scrollPosition > 0);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const handleGetInTouchClick = () => {
     const clickAndGoTo = document.getElementById("contact");
@@ -41,7 +44,7 @@ const Header = () => {
   };
 
   return (
-    <Wrapper scrolled={scrolled}>
+    <Wrapper scrl={scrl} id="header">
       <Logo />
       <ButtonsWrapper>
         <BurgerButton onClick={handleMenuToggle}>
@@ -57,9 +60,7 @@ const Header = () => {
             </ArrowIcon>
           </InnerCircle>
         </Btn>
-        {isMenuOpen && (
-          <BurgerMenu isOpen={handleMenuToggle} onClose={handleMenuClose} />
-        )}
+        {isMenuOpen && <BurgerMenu isOpen={true} onClose={handleMenuClose} />}
       </ButtonsWrapper>
     </Wrapper>
   );

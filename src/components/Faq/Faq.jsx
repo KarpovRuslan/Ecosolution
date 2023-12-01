@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import faqData from "../helpers/faqData.json";
 import icons from "../../utils/img/icons.svg";
 import {
@@ -22,26 +22,12 @@ import {
 
 export const Faq = () => {
   const [show, setShow] = useState([false, true, true, true, true]);
-  const [scrolled, setScrolled] = useState(0);
-
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    setScrolled(scrollPosition > 0);
-  };
 
   const handleToggle = (index) => {
     setShow((prevStates) => {
       return prevStates.map((_, i) => (i === index ? !prevStates[i] : true));
     });
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const handleClick = () => {
     const clickAndGoTo = document.getElementById("contact");
     if (clickAndGoTo) {
@@ -50,7 +36,7 @@ export const Faq = () => {
   };
 
   return (
-    <Wrapper id="faq" scrolled={scrolled}>
+    <Wrapper id="faq">
       <Title>Frequently Asked Questions</Title>
       <CardListWrapper>
         {faqData.map((faq, index) => (

@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.header`
+export const Wrapper = styled.header.attrs((props) => ({
+  style: {
+    backgroundColor: props.scrl === "true" ? "#fff" : "transparent",
+  },
+}))`
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 40px;
-  padding: 0;
-  background-color: ${(props) => (props.scrolled ? "#fff" : "transparent")};
+  margin-bottom: 20px;
+
   position: sticky;
   top: 0;
   z-index: 30;
@@ -15,7 +19,6 @@ export const Wrapper = styled.header`
     height: 68px;
   }
   @media screen and (min-width: 1280px) {
-    padding: 0;
   }
 `;
 

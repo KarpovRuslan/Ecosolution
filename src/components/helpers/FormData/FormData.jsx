@@ -39,7 +39,7 @@ const FormData = () => {
         placeholder="John Rosie"
         id="fullName"
         name="fullName"
-        hasError={!!errors.name}
+        data-has-error={!!errors.name}
         {...register("name", {
           required: true,
           maxLength: 50,
@@ -60,7 +60,7 @@ const FormData = () => {
         name="email"
         required
         placeholder="johnrosie@gmail.com"
-        hasError={!!errors.email}
+        data-has-error={!!errors.email}
         {...register("email", {
           required: true,
           pattern: /^[A-Z0-9._%+-]+@[A-Z0-9._]+\.[A-Z]{2,}$/i,
@@ -80,7 +80,7 @@ const FormData = () => {
         name="phone"
         type="phone"
         required
-        hasError={!!errors.phone}
+        data-has-error={!!errors.phone}
         {...register("phone", {
           required: true,
           pattern: /^\+?(38)?(\d{10,11})$/,

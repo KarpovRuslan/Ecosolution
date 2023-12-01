@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.main`
   font-family: Fira Sans;
   width: 320px;
   @media screen and (min-width: 768px) {

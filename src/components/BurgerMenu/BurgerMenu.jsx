@@ -75,7 +75,7 @@ const BurgerMenu = ({ isOpen, onClose }) => {
   return (
     <>
       <BlurBackground isOpen={isOpen} onClick={onClose} scrolled={scrolled} />
-      <MenuWrapper isOpen={isOpen}>
+      <MenuWrapper>
         <div>
           <BtnClose onClick={onClose}>
             <BtnCloseIcon>

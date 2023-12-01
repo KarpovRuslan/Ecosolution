@@ -9,16 +9,19 @@ import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <Main />
-      <About />
-      <Electricity />
-      <Cases />
-      <Faq />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      <div className="container">
+        <Header />
+
+        <Main />
+        <About />
+        <Electricity />
+        <Cases />
+        <Faq />
+        <Contact />
+        <Footer />
+      </div>
+    </>
   );
 }
 

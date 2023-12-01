@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 
 export const FormStyle = styled.form`
   display: flex;
@@ -45,8 +45,14 @@ export const Input = styled.input`
   &::placeholder {
     color: #bdbdbd;
   }
-  border-bottom-color: ${({ hasError }) =>
-    hasError ? "var(--warning-color)" : "var(--main-green-color)"};
+
+  border-bottom-color: var(--main-green-color);
+
+  ${({ "data-has-error": hasError }) =>
+    hasError &&
+    css`
+      border-bottom-color: var(--warning-color);
+    `}
 `;
 
 export const ErrorMessageStyle = styled.p`

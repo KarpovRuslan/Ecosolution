@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   margin-top: 24px;
   @media screen and (min-width: 768px) {
     margin-top: 100px;

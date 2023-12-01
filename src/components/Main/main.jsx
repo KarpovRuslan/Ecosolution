@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Image from "../../utils/img/wind_turbine-min.jpeg";
 import icons from "../../utils/img/icons.svg";
 import {
@@ -20,18 +19,6 @@ import {
 } from "./main.styled";
 
 const Main = () => {
-  const [scrolled, setScrolled] = useState(0);
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    setScrolled(scrollPosition > 0);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const handleClick = () => {
     const clickAndGoTo = document.getElementById("cases");
     if (clickAndGoTo) {
@@ -39,7 +26,7 @@ const Main = () => {
     }
   };
   return (
-    <Wrapper id="main" scrolled={scrolled}>
+    <Wrapper id="main">
       <CommonWrapper>
         <TitleWrapper>
           <Title>renewable energy for any task</Title>

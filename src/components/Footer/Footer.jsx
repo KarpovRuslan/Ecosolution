@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
 import icons from "../../utils/img/icons.svg";
 import {
@@ -14,18 +13,6 @@ import {
 import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Footer = () => {
-  const [scrolled, setScrolled] = useState(0);
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    setScrolled(scrollPosition > 0);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const handleClick = () => {
     const clickAndGoTo = document.getElementById("main");
     if (clickAndGoTo) {
@@ -33,7 +20,7 @@ const Footer = () => {
     }
   };
   return (
-    <div id="footer" scrolled={scrolled}>
+    <footer id="footer">
       <GreenLine />
       <Wrapper>
         <Logo />
@@ -60,7 +47,7 @@ const Footer = () => {
         </Email>
         <p>ecosolution © 2023</p>
       </AddressWrapper>
-    </div>
+    </footer>
   );
 };
 

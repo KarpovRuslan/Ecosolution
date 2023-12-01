@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&family=Oswald:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&family=Oswald:wght@400;700&display=swap");
 
 :root {
-    --main-black-color: #292d32;
-    --main-dark-green-color: #173d33;
-    --main-green-color: #97d28b;
-    --second-light-green-color: #dcefd8;
-    --main-backg-color: #f3f5fa;
-    --second-backg-color: #eaedf1;
-    --white-color: #fff;
-    --warning-color: #d28b8b;
-  }
+  --main-black-color: #292d32;
+  --main-dark-green-color: #173d33;
+  --main-green-color: #97d28b;
+  --second-light-green-color: #dcefd8;
+  --main-backg-color: #f3f5fa;
+  --second-backg-color: #eaedf1;
+  --white-color: #fff;
+  --warning-color: #d28b8b;
+}
 
 *,
-::after,    
+::after,
 ::before {
   margin: 0;
   padding: 0;
@@ -21,10 +21,10 @@
 }
 
 body {
-    font-family: "Fira Sans",;
-    color: var(--main-dark-green-color);
-    background-color: var(--main-backg-color);
-    overflow-x: hidden;
+  font-family: "Fira Sans";
+  color: var(--main-dark-green-color);
+  background-color: var(--main-backg-color);
+  overflow-x: hidden;
 }
 
 img {
@@ -52,10 +52,10 @@ p {
 }
 
 a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
 
 button {
   cursor: pointer;
@@ -75,23 +75,22 @@ select {
   margin-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 100%;
-  
+  width: 100%;
 
   @media screen and (min-width: 360px) {
     width: 360px;
   }
 
-    @media screen and (min-width: 768px) {
-      padding-right: 30px;
-      padding-left: 30px;
-      width: 768px;
-      margin-bottom: 40px;
-    }
+  @media screen and (min-width: 768px) {
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 768px;
+    margin-bottom: 40px;
+  }
 
-        @media screen and (min-width: 1280px) {
-            margin-top: 24px;
-            padding: 0;
-          width: 1242px;
-        }
+  @media screen and (min-width: 1280px) {
+    margin-top: 24px;
+    padding: 0;
+    width: 1242px;
+  }
 }
