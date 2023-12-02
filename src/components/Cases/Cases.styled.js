@@ -2,12 +2,15 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export const Wrapper = styled.section`
-  margin-top: 36px;
+  padding-top: 36px;
+  padding-bottom: 36px;
   @media screen and (min-width: 768px) {
-    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   @media screen and (min-width: 1280px) {
-    margin-top: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 `;
 

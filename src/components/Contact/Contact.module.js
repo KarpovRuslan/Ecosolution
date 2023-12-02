@@ -32,12 +32,7 @@ export const TitleText = styled.p`
   line-height: 28px;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 36px;
-  @media screen and (min-width: 768px) {
-    margin-top: 100px;
-  }
   @media screen and (min-width: 1280px) {
-    margin-top: 120px;
     font-size: 36px;
     line-height: 36px;
   }

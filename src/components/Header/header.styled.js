@@ -9,7 +9,7 @@ export const Wrapper = styled.header.attrs((props) => ({
   justify-content: space-between;
   align-items: center;
   height: 40px;
-  margin-bottom: 20px;
+  margin-top: 36px;
 
   position: sticky;
   top: 0;
@@ -19,6 +19,7 @@ export const Wrapper = styled.header.attrs((props) => ({
     height: 68px;
   }
   @media screen and (min-width: 1280px) {
+    margin-top: 24px;
   }
 `;
 

@@ -9,6 +9,7 @@ import {
   AddressWrapper,
   Email,
   MapLink,
+  FooterWrapper,
 } from "./Footer.styled";
 import SocialLinks from "../SocialLinks/SocialLinks";
 
@@ -20,7 +21,7 @@ const Footer = () => {
     }
   };
   return (
-    <footer id="footer">
+    <FooterWrapper id="footer">
       <GreenLine />
       <Wrapper>
         <Logo />
@@ -47,7 +48,7 @@ const Footer = () => {
         </Email>
         <p>ecosolution © 2023</p>
       </AddressWrapper>
-    </footer>
+    </FooterWrapper>
   );
 };
 

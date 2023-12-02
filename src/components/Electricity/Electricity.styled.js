@@ -5,7 +5,7 @@ export const Wrapper = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 36px;
+  padding-top: 36px;
 `;
 
 export const GreenLine = styled.span`

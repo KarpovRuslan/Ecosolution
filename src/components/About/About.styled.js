@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
-  margin-top: 24px;
+  padding-top: 24px;
   @media screen and (min-width: 768px) {
-    margin-top: 100px;
+    padding-top: 100px;
   }
   @media screen and (min-width: 1280px) {
-    margin-top: 122px;
+    padding-top: 122px;
   }
 `;
 

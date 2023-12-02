@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
-  margin-top: 36px;
+  padding-bottom: 36px;
   grid-template-columns: 1fr;
   grid-template-areas:
     "cardListWrapper"
     "titleAndLowerText";
   @media screen and (min-width: 768px) {
+    padding-bottom: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "cardListWrapper titleAndLowerText";
     column-gap: 24px;
-    margin-top: 100px;
   }
   @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
     column-gap: 48px;
-    margin-top: 120px;
   }
 `;
 

@@ -69,10 +69,8 @@ select {
 }
 
 .container {
-  margin-top: 36px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
@@ -85,11 +83,9 @@ select {
     padding-right: 30px;
     padding-left: 30px;
     width: 768px;
-    margin-bottom: 40px;
   }
 
   @media screen and (min-width: 1280px) {
-    margin-top: 24px;
     padding: 0;
     width: 1242px;
   }
