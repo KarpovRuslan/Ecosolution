@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 import {
   BlurBackground,
   BtnClose,
@@ -119,6 +120,11 @@ const BurgerMenu = ({ isOpen, onClose }) => {
       </MenuWrapper>
     </>
   );
+};
+
+BurgerMenu.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default BurgerMenu;
