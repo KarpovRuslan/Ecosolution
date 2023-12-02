@@ -17,7 +17,7 @@ import {
   CopyrightText,
   TitleImage,
   MapLink,
-} from "./Main.styled";
+} from "./main.styled";
 
 const Main = () => {
   const handleClick = () => {
