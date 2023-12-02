@@ -10,7 +10,7 @@ export const Wrapper = styled.section`
 
 export const GreenLine = styled.span`
   display: block;
-  width: 1px;
+  width: 2px;
   height: 48px;
   background-color: var(--main-green-color);
   margin-top: 24px;
