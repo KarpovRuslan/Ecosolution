@@ -1,14 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.section`
-  padding-top: 24px;
-  @media screen and (min-width: 768px) {
-    padding-top: 100px;
-  }
-  @media screen and (min-width: 1280px) {
-    padding-top: 122px;
-  }
-`;
+export const Wrapper = styled.section``;
 
 export const TitleAbout = styled.p`
   font-family: Oswald;

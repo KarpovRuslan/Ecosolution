@@ -73,6 +73,7 @@ select {
   margin-left: auto;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 36px;
   width: 100%;
 
   @media screen and (min-width: 360px) {
@@ -88,5 +89,6 @@ select {
   @media screen and (min-width: 1280px) {
     padding: 0;
     width: 1242px;
+    padding-top: 24px;
   }
 }

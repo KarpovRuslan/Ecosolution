@@ -6,6 +6,13 @@ export const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   padding-top: 36px;
+  padding-bottom: 36px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 100px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
+  }
 `;
 
 export const GreenLine = styled.span`

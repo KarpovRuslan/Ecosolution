@@ -29,9 +29,14 @@ export const Faq = () => {
     });
   };
   const handleClick = () => {
+    const headerHeight = document.getElementById("header").offsetHeight;
     const clickAndGoTo = document.getElementById("contact");
     if (clickAndGoTo) {
-      clickAndGoTo.scrollIntoView({ behavior: "smooth" });
+      const scrollPosition = clickAndGoTo.offsetTop - headerHeight;
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: "smooth",
+      });
     }
   };
 

@@ -3,11 +3,14 @@ import styled from "styled-components";
 export const Wrapper = styled.main`
   font-family: Fira Sans;
   width: 320px;
+  padding-bottom: 36px;
   @media screen and (min-width: 768px) {
     width: 708px;
+    padding-bottom: 100px;
   }
   @media screen and (min-width: 1280px) {
     width: 1242px;
+    padding-bottom: 120px;
   }
 `;
 
