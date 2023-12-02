@@ -140,6 +140,7 @@ export const ValueText = styled.p`
   margin-left: 12px;
   margin-right: 12px;
   padding-top: 12px;
+  margin-bottom: 12px;
 
   @media screen and (min-width: 1280px) {
     font-size: 16px;
