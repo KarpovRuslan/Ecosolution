@@ -112,7 +112,7 @@ const FormData = () => {
       )}
 
       <ButtonWrapper>
-        <Btn type="submit" text="Send">
+        <Btn type="submit">
           <InnerText>Send</InnerText>
           <InnerCircle>
             <ArrowIcon>

@@ -68,11 +68,15 @@ const About = () => {
           </ValueCard>
         ))}
         <>
-          <ValueImage src={ValueImage1} alt="Wind farms fields" area="image1" />
+          <ValueImage
+            src={ValueImage1}
+            alt="Wind farms fields"
+            $area="image1"
+          />
           <ValueImage
             src={ValueImage2}
             alt="Man worker field by solar panels"
-            area="image2"
+            $area="image2"
           />
         </>
 

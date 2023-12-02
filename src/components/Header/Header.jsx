@@ -49,7 +49,7 @@ const Header = () => {
   };
 
   return (
-    <Wrapper scrl={scrl} id="header">
+    <Wrapper $scrl={scrl} id="header">
       <Logo />
       <ButtonsWrapper>
         <BurgerButton onClick={handleMenuToggle}>
@@ -65,7 +65,7 @@ const Header = () => {
             </ArrowIcon>
           </InnerCircle>
         </Btn>
-        {isMenuOpen && <BurgerMenu isOpen={true} onClose={handleMenuClose} />}
+        {isMenuOpen && <BurgerMenu $isOpen={true} onClose={handleMenuClose} />}
       </ButtonsWrapper>
     </Wrapper>
   );

@@ -165,9 +165,17 @@ export const ValueImage = styled.img`
   @media screen and (min-width: 768px) {
     display: block;
     max-height: 197px;
-    grid-area: ${({ area }) => area};
+    grid-area: ${({ $area }) => $area};
   }
   @media screen and (min-width: 1280px) {
     max-height: 339px;
   }
+`;
+
+export const Icon = styled.svg`
+  stroke: var(--white-color);
+  fill: red;
+  width: 16px;
+  height: 16px;
+  transition: 0.3s ease;
 `;

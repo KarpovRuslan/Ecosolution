@@ -16,6 +16,7 @@ import {
   LowerWrapper,
   CopyrightText,
   TitleImage,
+  MapLink,
 } from "./main.styled";
 
 const Main = () => {
@@ -56,7 +57,13 @@ const Main = () => {
       </CommonWrapper>
       <LowerWrapper>
         <AddressWrapper>
-          <p>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</p>
+          <MapLink
+            href="https://www.google.com.ua/maps/search/79005,+Ukraine,+Lvivstreet.+Shota+Rustaveli,+7/@49.8313557,24.0323843,17z/data=!3m1!4b1?entry=ttu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
+          </MapLink>
           <Email href="mailto:office@ecosolution.com">
             office@ecosolution.com
           </Email>

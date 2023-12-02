@@ -23,7 +23,7 @@ const menuIdMapping = {
   contact: "contact",
 };
 
-const BurgerMenu = ({ isOpen, onClose }) => {
+const BurgerMenu = ({ $isOpen, onClose }) => {
   const [scrolled, setScrolled] = useState(0);
   useEffect(() => {
     const handleKeyPress = (event) => {
@@ -44,13 +44,13 @@ const BurgerMenu = ({ isOpen, onClose }) => {
       }
     };
 
-    if (isOpen) {
+    if ($isOpen) {
       document.addEventListener("click", handleBackdropClick);
     }
     return () => {
       document.removeEventListener("click", handleBackdropClick);
     };
-  }, [isOpen, onClose]);
+  }, [$isOpen, onClose]);
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -68,7 +68,7 @@ const BurgerMenu = ({ isOpen, onClose }) => {
     const element = document.getElementById(id);
 
     if (element) {
-      const headerHeight = document.getElementById("header").offsetHeight; // Replace "yourHeaderId" with the actual ID of your header
+      const headerHeight = document.getElementById("header").offsetHeight;
       const scrollPosition = element.offsetTop - headerHeight;
       window.scrollTo({
         top: scrollPosition,
@@ -81,7 +81,11 @@ const BurgerMenu = ({ isOpen, onClose }) => {
 
   return (
     <>
-      <BlurBackground isOpen={isOpen} onClick={onClose} scrolled={scrolled} />
+      <BlurBackground
+        $isOpen={$isOpen}
+        onClick={onClose}
+        $scrolled={scrolled}
+      />
       <MenuWrapper>
         <div>
           <BtnClose onClick={onClose}>
@@ -129,7 +133,7 @@ const BurgerMenu = ({ isOpen, onClose }) => {
 };
 
 BurgerMenu.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
+  $isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
 };
 

@@ -210,3 +210,12 @@ export const CopyrightText = styled.p`
     margin-left: 167px;
   }
 `;
+
+export const MapLink = styled.a`
+  transition: 0.5s ease;
+  &:hover,
+  &:focus {
+    color: var(--main-green-color);
+    transition: 0.5s ease;
+  }
+`;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.header.attrs((props) => ({
   style: {
-    backgroundColor: props.scrl === "true" ? "#fff" : "transparent",
+    backgroundColor: props.$scrl === "true" ? "#fff" : "transparent",
   },
 }))`
   display: flex;

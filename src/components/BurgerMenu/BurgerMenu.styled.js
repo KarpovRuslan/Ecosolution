@@ -8,9 +8,9 @@ export const BlurBackground = styled.div`
   height: 100vh;
   background: rgba(23, 61, 51, 0.25);
   backdrop-filter: blur(2px);
-  display: ${(props) => (props.isOpen ? "block" : "none")};
-  z-index: ${(props) => (props.isOpen ? 10 : -10)};
-  opacity: ${(props) => (props.isOpen ? 1 : 0)};
+  display: ${(props) => (props.$isOpen ? "block" : "none")};
+  z-index: ${(props) => (props.$isOpen ? 10 : -10)};
+  opacity: ${(props) => (props.$isOpen ? 1 : 0)};
   transition: all 0.5s ease;
 `;
 
