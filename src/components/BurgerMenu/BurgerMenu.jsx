@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import {
   BlurBackground,
   BtnClose,
@@ -68,7 +68,13 @@ const BurgerMenu = ({ isOpen, onClose }) => {
     const element = document.getElementById(id);
 
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const headerHeight = document.getElementById("header").offsetHeight; // Replace "yourHeaderId" with the actual ID of your header
+      const scrollPosition = element.offsetTop - headerHeight;
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: "smooth",
+      });
+
       onClose();
     }
   };
