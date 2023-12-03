@@ -30,11 +30,11 @@ const Footer = () => {
             <use href={icons + "#icon-arrow-right"} />
           </ArrowIcon>
         </InnerCircle>
-      </Wrapper>
-      <LinksWrapper>
-        <SocialLinks color="var(--main-dark-green-color)" />
-      </LinksWrapper>
 
+        <LinksWrapper>
+          <SocialLinks color="var(--main-dark-green-color)" />
+        </LinksWrapper>
+      </Wrapper>
       <AddressWrapper>
         <MapLink
           href="https://www.google.com.ua/maps/search/79005,+Ukraine,+Lvivstreet.+Shota+Rustaveli,+7/@49.8313557,24.0323843,17z/data=!3m1!4b1?entry=ttu"

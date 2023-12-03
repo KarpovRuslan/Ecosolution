@@ -10,9 +10,12 @@ export const FooterWrapper = styled.footer`
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 24px;
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
 `;
 
 export const GreenLine = styled.span`
@@ -51,6 +54,13 @@ export const InnerCircle = styled.button`
       stroke: var(--main-green-color);
     }
   }
+  @media screen and (min-width: 768px) {
+    order: 3;
+    margin-left: 130px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 0px;
+  }
 `;
 
 export const ButtonLinkUp = styled.div`
@@ -66,11 +76,11 @@ export const LinksWrapper = styled.ul`
   row-gap: 8px;
   stroke: var(--main-green-color);
   @media screen and (min-width: 768px) {
-    margin-top: -34px;
-    margin-left: 110px;
+    order: 2;
+    margin-top: 0px;
   }
   @media screen and (min-width: 1280px) {
-    margin-left: 400px;
+    margin-left: 170px;
   }
 `;
 
