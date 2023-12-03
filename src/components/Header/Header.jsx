@@ -8,6 +8,7 @@ import {
   InnerCircle,
   ArrowIcon,
   ButtonsWrapper,
+  Container,
 } from "./header.styled";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Logo from "../Logo/Logo";
@@ -49,25 +50,29 @@ const Header = () => {
   };
 
   return (
-    <Wrapper $scrl={scrl} id="header">
-      <Logo />
-      <ButtonsWrapper>
-        <BurgerButton onClick={handleMenuToggle}>
-          <BurgerIcon>
-            <use href={icons + "#icon-menu"} />
-          </BurgerIcon>
-        </BurgerButton>
-        <Btn onClick={handleGetInTouchClick}>
-          <InnerText>Get in touch</InnerText>
-          <InnerCircle>
-            <ArrowIcon>
-              <use href={icons + "#icon-arrow-right"} />
-            </ArrowIcon>
-          </InnerCircle>
-        </Btn>
-        {isMenuOpen && <BurgerMenu $isOpen={true} onClose={handleMenuClose} />}
-      </ButtonsWrapper>
-    </Wrapper>
+    <Container $scrl={scrl}>
+      <Wrapper id="header">
+        <Logo />
+        <ButtonsWrapper>
+          <BurgerButton onClick={handleMenuToggle}>
+            <BurgerIcon>
+              <use href={icons + "#icon-menu"} />
+            </BurgerIcon>
+          </BurgerButton>
+          <Btn onClick={handleGetInTouchClick}>
+            <InnerText>Get in touch</InnerText>
+            <InnerCircle>
+              <ArrowIcon>
+                <use href={icons + "#icon-arrow-right"} />
+              </ArrowIcon>
+            </InnerCircle>
+          </Btn>
+          {isMenuOpen && (
+            <BurgerMenu $isOpen={true} onClose={handleMenuClose} />
+          )}
+        </ButtonsWrapper>
+      </Wrapper>
+    </Container>
   );
 };
 

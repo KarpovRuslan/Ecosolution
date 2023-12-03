@@ -1,20 +1,31 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.header.attrs((props) => ({
+export const Container = styled.header.attrs((props) => ({
   style: {
     backgroundColor: props.$scrl === "true" ? "#fff" : "transparent",
   },
 }))`
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+`;
+
+export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
-  position: sticky;
-  top: 0;
-  z-index: 30;
+  margin: 0 auto;
+  padding: 36px 20px;
+  width: 360px;
 
   @media screen and (min-width: 768px) {
-    height: 68px;
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 768px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 24px 0px;
+    width: 1242px;
   }
 `;
 
