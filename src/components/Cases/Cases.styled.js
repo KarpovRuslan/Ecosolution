@@ -27,6 +27,7 @@ export const TitleCase = styled.p`
   @media screen and (min-width: 1280px) {
     font-size: 48px;
     line-height: 48px;
+    width: 398px;
   }
 `;
 
@@ -47,15 +48,15 @@ export const GreenLineHorizontal = styled.span`
     &:before {
       content: "";
       display: flex;
-      height: 110px;
+      height: 65px;
       border: 1px solid var(--main-green-color);
       flex-shrink: 0;
-      margin-right: 40px;
     }
   }
   @media screen and (min-width: 1280px) {
     &:before {
       height: 87px;
+      margin-right: 130px;
     }
   }
 `;
@@ -66,7 +67,7 @@ export const WrapperCase = styled.div`
   margin-top: 24px;
   @media screen and (min-width: 768px) {
     margin-top: 0px;
-    margin-left: -10px;
+    margin-left: 9px;
   }
   @media screen and (min-width: 1280px) {
     margin-top: 0px;
@@ -84,6 +85,9 @@ export const CurrentCase = styled.div`
   letter-spacing: -1.12px;
   display: flex;
   align-items: flex-end;
+  @media screen and (min-width: 768px) {
+    margin-right: 38px;
+  }
 `;
 
 export const CurrentNumber = styled.p`

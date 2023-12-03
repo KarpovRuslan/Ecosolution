@@ -21,6 +21,9 @@ export const GreenLine = styled.span`
   height: 48px;
   background-color: var(--main-green-color);
   margin-top: 24px;
+  @media screen and (min-width: 768px) {
+    height: 87px;
+  }
   @media screen and (min-width: 1280px) {
     margin-top: 16px;
   }
@@ -38,10 +41,12 @@ export const TitleElectricity = styled.p`
   @media screen and (min-width: 768px) {
     font-size: 36px;
     line-height: 36px;
+    width: 368px;
   }
   @media screen and (min-width: 1280px) {
     font-size: 48px;
     line-height: 48px;
+    width: 491px;
   }
 `;
 
