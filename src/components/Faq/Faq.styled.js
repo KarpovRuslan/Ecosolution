@@ -23,7 +23,7 @@ export const CardListWrapper = styled.ul`
   grid-area: cardListWrapper;
 `;
 
-export const Title = styled.p`
+export const Title = styled.h1`
   color: #173d33;
   font-family: Oswald;
   font-size: 28px;

@@ -11,7 +11,7 @@ export const Wrapper = styled.section`
   }
 `;
 
-export const TitleCase = styled.p`
+export const TitleCase = styled.h1`
   color: var(--main-dark-green-color);
   font-family: Oswald;
   font-size: 28px;

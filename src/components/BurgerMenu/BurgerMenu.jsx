@@ -45,9 +45,14 @@ const BurgerMenu = ({ $isOpen, onClose }) => {
     };
 
     if ($isOpen) {
+      document.body.style.overflow = "hidden";
       document.addEventListener("click", handleBackdropClick);
+    } else {
+      document.body.style.overflow = "";
+      document.removeEventListener("click", handleBackdropClick);
     }
     return () => {
+      document.body.style.overflow = "";
       document.removeEventListener("click", handleBackdropClick);
     };
   }, [$isOpen, onClose]);

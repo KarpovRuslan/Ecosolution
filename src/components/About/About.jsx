@@ -72,11 +72,13 @@ const About = () => {
             src={ValueImage1}
             alt="Wind farms fields"
             $area="image1"
+            loading="lazy"
           />
           <ValueImage
             src={ValueImage2}
             alt="Man worker field by solar panels"
             $area="image2"
+            loading="lazy"
           />
         </>
 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const BlurBackground = styled.div`
   position: fixed;
   top: 0;
@@ -12,6 +13,7 @@ export const BlurBackground = styled.div`
   z-index: ${(props) => (props.$isOpen ? 10 : -10)};
   opacity: ${(props) => (props.$isOpen ? 1 : 0)};
   transition: all 0.5s ease;
+  overflow: hidden;
 `;
 
 export const MenuWrapper = styled.div`

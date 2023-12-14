@@ -30,7 +30,7 @@ export const TitleWrapper = styled.div`
   }
 `;
 
-export const Title = styled.p`
+export const Title = styled.h1`
   font-family: Oswald;
   font-size: 36px;
   font-style: normal;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section``;
 
-export const TitleAbout = styled.p`
+export const TitleAbout = styled.h1`
   font-family: Oswald;
   font-size: 28px;
   font-style: normal;

@@ -23,7 +23,7 @@ export const BlockWrapper = styled.div`
   }
 `;
 
-export const TitleText = styled.p`
+export const TitleText = styled.h1`
   color: var(--main-dark-green-color);
   font-family: Oswald;
   font-size: 28px;

@@ -88,7 +88,7 @@ const Cases = () => {
         {swiperData.map((item, index) => (
           <CaseSlide key={index}>
             <SlideBlock>
-              <Image src={images[index]} alt={item.alt} />
+              <Image src={images[index]} alt={item.alt} loading="lazy" />
               <DescriptionWrapper>
                 <DescriptionTitle>
                   <TitleText>{item.title}</TitleText>

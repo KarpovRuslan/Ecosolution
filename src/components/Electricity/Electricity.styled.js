@@ -31,7 +31,7 @@ export const GreenLine = styled.span`
   }
 `;
 
-export const TitleElectricity = styled.p`
+export const TitleElectricity = styled.h1`
   color: var(--main-dark-green-color);
   text-align: center;
   font-family: Oswald;
