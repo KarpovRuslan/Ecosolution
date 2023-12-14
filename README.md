@@ -1,5 +1,6 @@
 # Frontend SoftRyzen Ecosolution
 
-Тестове завдання Frontend
+Реалізований лендінг Ecosolution відповідно до технічного завдання.
 
-Реалізувати лендінг Ecosolution відповідно до технічного завдання.
+Використано:
+[![My Skills](https://skillicons.dev/icons?i=react,js,html,css,styledcomponents,svg,vscode,figma)]
