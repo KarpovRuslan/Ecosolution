@@ -49,7 +49,7 @@ const Faq = () => {
             <GreenLine key={index} />
             <CardWrapper>
               <CardWrapperUpper>
-                <ButtonIcon onClick={() => handleToggle(index)}>
+                <ButtonIcon type="button" onClick={() => handleToggle(index)}>
                   {show[index] ? (
                     <Icon>
                       <use href={icons + "#icon-add"} />
@@ -71,7 +71,7 @@ const Faq = () => {
       </CardListWrapper>
       <LowerText>
         Didn't find the answer to your question?
-        <Btn onClick={handleClick}>
+        <Btn type="button" onClick={handleClick}>
           <InnerText>Contact Us</InnerText>
           <InnerCircle>
             <ArrowIcon>

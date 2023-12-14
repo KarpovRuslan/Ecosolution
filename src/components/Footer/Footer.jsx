@@ -25,7 +25,7 @@ const Footer = () => {
       <GreenLine />
       <Wrapper>
         <Logo />
-        <InnerCircle onClick={handleClick}>
+        <InnerCircle type="button" onClick={handleClick}>
           <ArrowIcon>
             <use href={icons + "#icon-arrow-right"} />
           </ArrowIcon>

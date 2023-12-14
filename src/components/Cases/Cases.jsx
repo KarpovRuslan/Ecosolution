@@ -92,7 +92,7 @@ const Cases = () => {
               <DescriptionWrapper>
                 <DescriptionTitle>
                   <TitleText>{item.title}</TitleText>
-                  <ButtonBlock>
+                  <ButtonBlock type="button">
                     <ButtonBlockIcon>
                       <use href={`${icons}#icon-arrow-right`} />
                     </ButtonBlockIcon>

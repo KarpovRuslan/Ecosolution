@@ -54,12 +54,12 @@ const Header = () => {
       <Wrapper id="header">
         <Logo />
         <ButtonsWrapper>
-          <BurgerButton onClick={handleMenuToggle}>
-            <BurgerIcon>
+          <BurgerButton type="button" onClick={handleMenuToggle}>
+            <BurgerIcon type="button">
               <use href={icons + "#icon-menu"} />
             </BurgerIcon>
           </BurgerButton>
-          <Btn onClick={handleGetInTouchClick}>
+          <Btn type="button" onClick={handleGetInTouchClick}>
             <InnerText>Get in touch</InnerText>
             <InnerCircle>
               <ArrowIcon>

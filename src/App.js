@@ -3,7 +3,7 @@ import Main from "./components/Main/main";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Electricity from "./components/Electricity/Electricity";
-import { Faq } from "./components/Faq/Faq";
+import Faq from "./components/Faq/Faq";
 import Cases from "./components/Cases/Cases";
 import Contact from "./components/Contact/Contact";
 

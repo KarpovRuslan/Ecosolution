@@ -12,11 +12,11 @@ export const LogoInHover = styled(LogoHover)`
 
 export const LogoWrapper = styled.a`
   &:hover,
-  &:focus ${LogoImg}, &:not(:hover) ${LogoInHover} {
+  ${LogoImg}, &:not(:hover) ${LogoInHover} {
     display: none;
   }
   &:hover,
-  &:focus ${LogoInHover}, &:not(:hover) ${LogoImg} {
+  ${LogoInHover}, &:not(:hover) ${LogoImg} {
     display: block;
   }
 `;

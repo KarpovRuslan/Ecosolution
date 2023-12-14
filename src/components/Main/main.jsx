@@ -45,7 +45,7 @@ const Main = () => {
             biomass
           </Text>
 
-          <Btn onClick={handleClick}>
+          <Btn type="button" onClick={handleClick}>
             <InnerText>Learn more</InnerText>
             <InnerCircle>
               <ArrowIcon>
