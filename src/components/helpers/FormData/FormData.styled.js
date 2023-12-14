@@ -82,7 +82,8 @@ export const Btn = styled.button`
   background-color: var(--main-backg-color);
   color: var(--main-dark-green-color);
   transition: 0.5s ease;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--main-dark-green-color);
     color: var(--main-green-color);
     border-color: var(--main-dark-green-color);

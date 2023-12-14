@@ -20,7 +20,7 @@ import {
   CardListWrapper,
 } from "./Faq.styled";
 
-export const Faq = () => {
+const Faq = () => {
   const [show, setShow] = useState([false, true, true, true, true]);
 
   const handleToggle = (index) => {
@@ -83,3 +83,5 @@ export const Faq = () => {
     </Wrapper>
   );
 };
+
+export default Faq;

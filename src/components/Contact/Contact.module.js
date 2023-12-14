@@ -72,7 +72,8 @@ export const Link = styled.a`
   font-style: normal;
   color: var(--main-dark-green-color);
   transition: 0.3s ease;
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--main-green-color);
     transition: 0.3s ease;
     ${Icon} {

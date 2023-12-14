@@ -31,7 +31,8 @@ export const CustomButton = styled.button`
   border: 1px solid var(--main-dark-green-color);
   background-color: transparent;
   transition: 0.5s ease;
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: var(--main-green-color);
     transition: 0.5s ease;
     & ${IconLeft} {
